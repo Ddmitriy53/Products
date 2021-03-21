@@ -146,7 +146,7 @@ svg path {
   left: 0;
   margin: 0;
   border: none;
-  border-radius: none;
+  -webkit-border-radius: 0;
   outline: none;
   width: 16px;
   height: 14px;
