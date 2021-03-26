@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Тестовые товары</title>
   <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,9 +15,452 @@
 
   <div class="products">
     <div class="container">
-      <section class="test-products">
-        <div class="products-top">
-          <h2 class="products-top__title">Тестовые товары</h2>
+      <div class="product-tabs">
+
+        <div class="tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item js-tab-trigger active" data-tab="1">
+              <a class="tabs__link tabs__link--active">Всё о товаре</a>
+            </li>
+            <li class="tabs__item js-tab-trigger" data-tab="2">
+              <a class="tabs__link tabs__link">Описание</a>
+            </li>
+            <li class="tabs__item js-tab-trigger" data-tab="3">
+              <a class="tabs__link tabs__link">Характеристики</a>
+            </li>
+            <li class="tabs__item js-tab-trigger" data-tab="4">
+              <a class="tabs__link tabs__link">Отзывы <span class="tabs__link-span">32</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tabs-content">
+          <div class="tabs-content__item tabs-main js-tab-content active" data-tab="1">
+            <div class="product-info">
+              <div class="product-info__left">
+                <div class="product-slider">
+                  <div class="product-slider__item">
+                    <img class="product-slider__img" src="img/product-slider/slider-image-1.jpg" alt="Slider image">
+                  </div>
+                  <div class="product-slider__item">
+                    <img class="product-slider__img" src="img/product-slider/slider-image-2.jpg" alt="Slider image">
+                  </div>
+                  <div class="product-slider__item">
+                    <img class="product-slider__img" src="img/product-slider/slider-image-3.jpg" alt="Slider image">
+                  </div>
+                  <div class="product-slider__item">
+                    <img class="product-slider__img" src="img/product-slider/slider-image-4.jpg" alt="Slider image">
+                  </div>
+                  <div class="product-slider__item">
+                    <img class="product-slider__img" src="img/product-slider/slider-image-5.jpg" alt="Slider image">
+                  </div>
+                </div>
+              </div>
+
+              <div class=".product-info-image">
+                <div class="product-info__slider">
+                  <div class="product-content__slider-item">
+                    <img class="product-content__slider-img" src="img/product-slider/slider-big-image-1.jpg"
+                      alt="Big slider image">
+                  </div>
+                  <div class="product-content__slider-item">
+                    <img class="product-content__slider-img" src="img/product-slider/slider-big-image-2.jpg"
+                      alt="Big slider image">
+                  </div>
+                  <div class="product-content__slider-item">
+                    <img class="product-content__slider-img" src="img/product-slider/slider-big-image-3.jpg"
+                      alt="Big slider image">
+                  </div>
+                  <div class="product-content__slider-item">
+                    <img class="product-content__slider-img" src="img/product-slider/slider-big-image-4.jpg"
+                      alt="Big slider image">
+                  </div>
+                  <div class="product-content__slider-item">
+                    <img class="product-content__slider-img" src="img/product-slider/slider-big-image-5.jpg"
+                      alt="Big slider image">
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-order">
+                <div class="product-statuses">
+                  <div class="availability">
+                    <svg class="availability__img" width="21" height="20">
+                      <use href="icons/sprite.svg#check" />
+                    </svg>
+                    <span class="availability__text">В наличии</span>
+                  </div>
+                  <form class="product-rating">
+                    <fieldset class="rating">
+                      <legend class="rating__caption">Рейтинг</legend>
+                      <div class="rating__group">
+                        <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
+                        <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
+                        <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
+                        <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо"
+                          checked>
+                        <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                      </div>
+                    </fieldset>
+                    <a href="#" class="product-rating__link">32</a>
+                  </form>
+                  <div class="product-part-number">Артикул: <span>100500</span></div>
+                </div>
+                <div class="buy-card">
+                  <div class="discount">
+                    <div class="discount__title">Акция</div>
+                    <span class="discount__description">До 30 марта скидка — 20% на все турбокомпрессоры бренда
+                      TurboParts</span>
+                  </div>
+                  <div class="product-price">
+                    <div class="product-price__value">3&nbsp;799<span class="product-price__symbol">&#8372;</span>
+                    </div>
+                    <div class="product-price__old-value">4&nbsp;200<span
+                        class="product-price__symbol">&nbsp;&#8372;</span></div>
+                  </div>
+                  <div class="order">
+                    <button type="button" class="order__cart">
+                      <span class="order__cart-text">В корзину</span>
+                      <svg class="order__card-img" width="30" height="30">
+                        <use href="icons/sprite.svg#cart" />
+                      </svg>
+                    </button>
+                    <button type="button" class="order__compare">
+                      <svg class="order__compare-img" width="30" height="30">
+                        <use href="icons/sprite.svg#compare" />
+                      </svg>
+                    </button>
+                    <button type="button" class="order__favorite">
+                      <svg class="order__favorite-img" width="30" height="30">
+                        <use href="icons/sprite.svg#favorite" />
+                      </svg>
+                    </button>
+                    <button type="button" class="order__one-click">
+                      <svg class="order__one-click-img" width="30" height="30">
+                        <use href="icons/sprite.svg#phone" />
+                      </svg>
+                      <span class="order__one-click-text">Купить в <br> 1 клик</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="terms">
+                  <div class="terms__item">
+                    <div class="terms__top">
+                      <svg class="terms__guarantee-img" width="20" height="20">
+                        <use href="icons/sprite.svg#guarantee" />
+                      </svg>
+                      <div class="terms__title">Гарантия</div>
+                      <button class="terms__button">
+                        <svg class="terms__button-img" width="9" height="6">
+                          <use href="icons/sprite.svg#small-arrow" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="terms__content">
+                      <p class="terms__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                        laboriosam eius ad molestiae illo non, vero quisquam fugit sunt repellat.</p>
+                    </div>
+                  </div>
+                  <div class="terms__item">
+                    <div class="terms__top">
+                      <svg class="terms__delivery-img" width="20" height="20">
+                        <use href="icons/sprite.svg#delivery" />
+                      </svg>
+                      <div class="terms__title">Условия доставки</div>
+                      <button class="terms__button">
+                        <svg class="terms__button-img" width="9" height="6">
+                          <use href="icons/sprite.svg#small-arrow" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="terms__content">
+                      <p class="terms__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                        laboriosam eius ad molestiae illo non, vero quisquam fugit sunt repellat.</p>
+                    </div>
+                  </div>
+                  <div class="terms__item">
+                    <div class="terms__top">
+                      <svg class="terms__payments-img" width="20" height="20">
+                        <use href="icons/sprite.svg#payments" />
+                      </svg>
+                      <div class="terms__title">Условия оплаты</div>
+                      <button class="terms__button">
+                        <svg class="terms__button-img" width="9" height="6">
+                          <use href="icons/sprite.svg#small-arrow" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="terms__content">
+                      <p class="terms__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                        laboriosam eius ad molestiae illo non, vero quisquam fugit sunt repellat.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <section class="characteristics">
+                <div class="characteristics__heading">
+                  <h2 class="characteristics__title">Характеристики
+                    <span class="characteristics__product-name">Картридж турбины Mercedes E-klasse</span>
+                  </h2>
+                </div>
+                <div class="characteristics__group">
+                  <dl class="characteristics__list">
+                    <div class="characteristics__item">
+                      <dt class="characteristics__label">
+                        <span>Тип</span>
+                      </dt>
+                      <dd class="characteristics__value">
+                        <ul class="characteristics-sub__list">
+                          <li>Группа 1</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics__item">
+                      <dt class="characteristics__label">
+                        <span>Номер</span>
+                      </dt>
+                      <dd class="characteristics__value">
+                        <ul class="characteristics__sub-list">
+                          <li>B40-2-210</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics__item">
+                      <dt class="characteristics__label">
+                        <span>Бренд</span>
+                      </dt>
+                      <dd class="characteristics__value">
+                        <ul class="characteristics__sub-list">
+                          <li>TurboParts</li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+                <a href="#" class="characteristics__link-more">Все характеристики</a>
+              </section>
+
+              <div class="product-reviews">
+                <div class="product-reviews__heading">
+                  <h2 class="product-reviews__title">Отзывы покупателей <span class="product-reviews__number">32</span>
+                  </h2>
+                  <a href="" class="product-reviews__link">Все отзывы</a>
+                </div>
+                <div class="reviews" id="reviews">
+
+                  <div class="reviews__item">
+                    <div class="reviews__heading">
+                      <span class="reviews__author">Плахова Карина</span>
+                      <span class="reviews__slash">/</span>
+                      <span class="reviews__date">21 мая 2020</span>
+                      <form class="reviews__rating">
+                        <fieldset class="rating">
+                          <legend class="rating__caption">Качество товара</legend>
+                          <div class="rating__group">
+                            <input class="rating__star" type="radio" name="product-rating" value="1"
+                              aria-label="Ужасно">
+                            <input class="rating__star" type="radio" name="product-rating" value="2"
+                              aria-label="Сносно">
+                            <input class="rating__star" type="radio" name="product-rating" value="3"
+                              aria-label="Нормально">
+                            <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо"
+                              checked>
+                            <input class="rating__star" type="radio" name="product-rating" value="5"
+                              aria-label="Отлично">
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                    <p class="reviews__content">Покупка этой турбины была спонтанной и незапланированной. В течении
+                      часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не
+                      сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и
+                      единственный <br> нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных
+                      я ставила пергамент, но мыть все равно сложновато.</p>
+                  </div>
+
+                  <div class="reviews__item">
+                    <div class="reviews__heading">
+                      <span class="reviews__author">Рогозин Тимур</span>
+                      <span class="reviews__slash">/</span>
+                      <span class="reviews__date">17 мая 2020</span>
+                      <form class="reviews__rating">
+                        <fieldset class="rating">
+                          <legend class="rating__caption">Качество товара</legend>
+                          <div class="rating__group">
+                            <input class="rating__star" type="radio" name="product-rating" value="1"
+                              aria-label="Ужасно">
+                            <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно"
+                              checked>
+                            <input class="rating__star" type="radio" name="product-rating" value="3"
+                              aria-label="Нормально">
+                            <input class="rating__star" type="radio" name="product-rating" value="4"
+                              aria-label="Хорошо">
+                            <input class="rating__star" type="radio" name="product-rating" value="5"
+                              aria-label="Отлично">
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                    <p class="reviews__content">Покупка этой турбины была спонтанной и незапланированной. В течении
+                      часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не
+                      сьемные, но плюсов было больше. Спасибо за молниеносную отправку!</p>
+                  </div>
+                  <div class="reviews__load">
+                    <button type="button" class="reviews__load-btn">Показать еще</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="tabs-content__item tabs-description js-tab-content" data-tab="2">
+            <div id="editorjs"></div>
+          </div>
+          <div class="tabs-content__item tabs-characteristics js-tab-content" data-tab="3">
+            <section class="characteristics-full">
+              <div class="characteristics-full__heading">
+                <h2 class="characteristics-full__title">Характеристики
+                  <span class="characteristics-full__product-name">Картридж турбины Mercedes E-klasse</span>
+                </h2>
+              </div>
+              <div class="characteristics-full__content">
+                <div class="characteristics-full__group">
+                  <dl class="characteristics-full__list">
+                    <div class="characteristics-full__item">
+                      <dt class="characteristics-full__label">
+                        <span>Тип</span>
+                      </dt>
+                      <dd class="characteristics-full__value">
+                        <ul class="characteristics-full__sub-list">
+                          <li>Группа 1</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics-full__item">
+                      <dt class="characteristics-full__label">
+                        <span>Номер</span>
+                      </dt>
+                      <dd class="characteristics-full__value">
+                        <ul class="characteristics-full__sub-list">
+                          <li>B40-2-210</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics-full__item">
+                      <dt class="characteristics-full__label">
+                        <span>Бренд</span>
+                      </dt>
+                      <dd class="characteristics-full__value">
+                        <ul class="characteristics-full__sub-list">
+                          <li>TurboParts</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics-full__item">
+                      <dt class="characteristics-full__label">
+                        <span>Тип</span>
+                      </dt>
+                      <dd class="characteristics-full__value">
+                        <ul class="characteristics-full__sub-list">
+                          <li>Группа 1</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics-full__item">
+                      <dt class="characteristics-full__label">
+                        <span>Номер</span>
+                      </dt>
+                      <dd class="characteristics-full__value">
+                        <ul class="characteristics-full__sub-list">
+                          <li>B40-2-210</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="characteristics-full__item">
+                      <dt class="characteristics-full__label">
+                        <span>Бренд</span>
+                      </dt>
+                      <dd class="characteristics-full__value">
+                        <ul class="characteristics-full__sub-list">
+                          <li>TurboParts</li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+            </section>
+          </div>
+          <div class="tabs-content__item tabs-rewiews js-tab-content" data-tab="4">
+            <div class="product-reviews">
+              <div class="product-reviews__heading">
+                <h2 class="product-reviews__title">Отзывы покупателей <span class="product-reviews__number">32</span>
+                </h2>
+                <a href="" class="product-reviews__link">Все отзывы</a>
+              </div>
+              <div class="reviews">
+
+                <div class="reviews__item">
+                  <div class="reviews__heading">
+                    <span class="reviews__author">Плахова Карина</span>
+                    <span class="reviews__slash">/</span>
+                    <span class="reviews__date">21 мая 2020</span>
+                    <form class="reviews__rating">
+                      <fieldset class="rating">
+                        <legend class="rating__caption">Качество товара</legend>
+                        <div class="rating__group">
+                          <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
+                          <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
+                          <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
+                          <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо" checked="">
+                          <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                  <p class="reviews__content">Покупка этой турбины была спонтанной и незапланированной. В течении
+                    часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не
+                    сьемные, но плюсов было больше. Спасибо за молниеносную отправку! 2 дня с момента заказа и
+                    единственный <br> нюанс-все таки сьемные пластины удобнее, наверное. Но по советам более опытных
+                    я ставила пергамент, но мыть все равно сложновато.</p>
+                </div>
+
+                <div class="reviews__item">
+                  <div class="reviews__heading">
+                    <span class="reviews__author">Рогозин Тимур</span>
+                    <span class="reviews__slash">/</span>
+                    <span class="reviews__date">17 мая 2020</span>
+                    <form class="reviews__rating">
+                      <fieldset class="rating">
+                        <legend class="rating__caption">Качество товара</legend>
+                        <div class="rating__group">
+                          <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
+                          <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно" checked="">
+                          <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
+                          <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
+                          <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                  <p class="reviews__content">Покупка этой турбины была спонтанной и незапланированной. В течении
+                    часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не
+                    сьемные, но плюсов было больше. Спасибо за молниеносную отправку!</p>
+                </div>
+                <div class="reviews__load">
+                  <button type="button" class="reviews__load-btn">Показать еще</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class=" test-products">
+        <div class="test-products__top">
+          <h2 class="test-products__title">Тестовые товары</h2>
         </div>
         <div class="products-main">
 
@@ -27,7 +471,7 @@
 
               <button class="card-top__button">
                 <svg class="card-top__button-img" width="31" height="24">
-                  <use href="icons/sprite.svg#card-favourite" />
+                  <use href="icons/sprite.svg#favorite" />
                 </svg>
               </button>
 
@@ -56,32 +500,33 @@
                 </a>
               </form>
 
-              <div class="product-info">
-                <a href="#" class="product-info__link">
-                  <span class="product-info__title-group">Group</span>
+              <div class="test-product-info">
+                <a href="#" class="test-product-info__link">
+                  <span class="test-product-info__title-group">Group</span>
                 </a>
-                <p class="product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur
+                <p class="test-product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  consectetur
                   adipisicing elit</p>
               </div>
 
-              <div class="product-bottom">
+              <div class="test-product-bottom">
 
-                <div class="product-price">
-                  <span class="product-price__value">3&nbsp;799
-                    <span class="product-price__value-currency">&#8372;</span>
+                <div class="test-product-price">
+                  <span class="test-product-price__value">3&nbsp;799
+                    <span class="test-product-price__value-currency">&#8372;</span>
                   </span>
                 </div>
 
-                <div class="product-availability">
-                  <button class="product-availability__btn">
-                    <svg class="product-availability__img" width="21" height="20">
+                <div class="availability">
+                  <button class="availability__btn">
+                    <svg class="availability__img" width="21" height="20">
                       <use href="icons/sprite.svg#check" />
                     </svg>
-                    <span class="product-availability__available">В наличии</span>
-                    <!-- <svg class="product-availability__not-av-img" width="21" height="20">
-                    <use href="icons/sprite.svg#check-not-av"/>
-                  </svg> -->
-                    <!-- <span class="product-availability__not-available">Нет в наличии</span> -->
+                    <span class="availability__text">В наличии</span>
+                    <!-- <svg class="availability__img-not" width="21" height="20">
+                      <use href="icons/sprite.svg#check-not-av"/>
+                    </svg>
+                    <span class="availability__not">Нет в наличии</span> -->
                   </button>
                 </div>
               </div>
@@ -95,7 +540,7 @@
 
               <button class="card-top__button">
                 <svg class="card-top__button-img" width="31" height="24">
-                  <use href="icons/sprite.svg#card-favourite" />
+                  <use href="icons/sprite.svg#favorite" />
                 </svg>
               </button>
 
@@ -124,31 +569,27 @@
                 </a>
               </form>
 
-              <div class="product-info">
-                <a href="#" class="product-info__link">
-                  <span class="product-info__title-group">Group</span>
+              <div class="test-product-info">
+                <a href="#" class="test-product-info__link">
+                  <span class="test-product-info__title-group">Group</span>
                 </a>
-                <p class="product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <p class="test-product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
               </div>
 
-              <div class="product-bottom">
+              <div class="test-product-bottom">
 
-                <div class="product-price">
-                  <span class="product-price__value">711
-                    <span class="product-price__value-currency">&#8372;</span>
+                <div class="test-product-price">
+                  <span class="test-product-price__value">711
+                    <span class="test-product-price__value-currency">&#8372;</span>
                   </span>
                 </div>
 
-                <div class="product-availability">
-                  <button class="product-availability__btn">
-                    <svg class="product-availability__img" width="21" height="20">
+                <div class="availability">
+                  <button class="availability__btn">
+                    <svg class="availability__img" width="21" height="20">
                       <use href="icons/sprite.svg#check" />
                     </svg>
-                    <span class="product-availability__available">В наличии</span>
-                    <!-- <svg class="product-availability__not-av-img" width="21" height="20">
-                    <use href="icons/sprite.svg#check-not-av"/>
-                  </svg> -->
-                    <!-- <span class="product-availability__not-available">Нет в наличии</span> -->
+                    <span class="availability__text">В наличии</span>
                   </button>
                 </div>
               </div>
@@ -162,7 +603,7 @@
 
               <button class="card-top__button">
                 <svg class="card-top__button-img" width="31" height="24">
-                  <use href="icons/sprite.svg#card-favourite" />
+                  <use href="icons/sprite.svg#favorite" />
                 </svg>
               </button>
 
@@ -191,31 +632,27 @@
                 </a>
               </form>
 
-              <div class="product-info">
-                <a href="#" class="product-info__link">
-                  <span class="product-info__title-group">Group</span>
+              <div class="test-product-info">
+                <a href="#" class="test-product-info__link">
+                  <span class="test-product-info__title-group">Group</span>
                 </a>
-                <p class="product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <p class="test-product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
               </div>
 
-              <div class="product-bottom">
+              <div class="test-product-bottom">
 
-                <div class="product-price">
-                  <span class="product-price__value">22&nbsp;105
-                    <span class="product-price__value-currency">&#8372;</span>
+                <div class="test-product-price">
+                  <span class="test-product-price__value">22&nbsp;105
+                    <span class="test-product-price__value-currency">&#8372;</span>
                   </span>
                 </div>
 
-                <div class="product-availability">
-                  <button class="product-availability__btn">
-                    <svg class="product-availability__img" width="21" height="20">
+                <div class="availability">
+                  <button class="availability__btn">
+                    <svg class="availability__img" width="21" height="20">
                       <use href="icons/sprite.svg#check" />
                     </svg>
-                    <span class="product-availability__available">В наличии</span>
-                    <!-- <svg class="product-availability__not-av-img" width="21" height="20">
-                    <use href="icons/sprite.svg#check-not-av"/>
-                  </svg> -->
-                    <!-- <span class="product-availability__not-available">Нет в наличии</span> -->
+                    <span class="availability__text">В наличии</span>
                   </button>
                 </div>
               </div>
@@ -229,7 +666,7 @@
 
               <button class="card-top__button">
                 <svg class="card-top__button-img" width="31" height="24">
-                  <use href="icons/sprite.svg#card-favourite" />
+                  <use href="icons/sprite.svg#favorite" />
                 </svg>
               </button>
 
@@ -258,31 +695,27 @@
                 </a>
               </form>
 
-              <div class="product-info">
-                <a href="#" class="product-info__link">
-                  <span class="product-info__title-group">Group</span>
+              <div class="test-product-info">
+                <a href="#" class="test-product-info__link">
+                  <span class="test-product-info__title-group">Group</span>
                 </a>
-                <p class="product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <p class="test-product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
               </div>
 
-              <div class="product-bottom">
+              <div class="test-product-bottom">
 
-                <div class="product-price">
-                  <span class="product-price__value">158
-                    <span class="product-price__value-currency">&#8372;</span>
+                <div class="test-product-price">
+                  <span class="test-product-price__value">158
+                    <span class="test-product-price__value-currency">&#8372;</span>
                   </span>
                 </div>
 
-                <div class="product-availability">
-                  <button class="product-availability__btn">
-                    <svg class="product-availability__img" width="21" height="20">
+                <div class="availability">
+                  <button class="availability__btn">
+                    <svg class="availability__img" width="21" height="20">
                       <use href="icons/sprite.svg#check" />
                     </svg>
-                    <span class="product-availability__available">В наличии</span>
-                    <!-- <svg class="product-availability__not-av-img" width="21" height="20">
-                    <use href="icons/sprite.svg#check-not-av"/>
-                  </svg> -->
-                    <!-- <span class="product-availability__not-available">Нет в наличии</span> -->
+                    <span class="availability__text">В наличии</span>
                   </button>
                 </div>
               </div>
@@ -296,7 +729,7 @@
 
               <button class="card-top__button">
                 <svg class="card-top__button-img" width="31" height="24">
-                  <use href="icons/sprite.svg#card-favourite" />
+                  <use href="icons/sprite.svg#favorite" />
                 </svg>
               </button>
 
@@ -325,31 +758,90 @@
                 </a>
               </form>
 
-              <div class="product-info">
-                <a href="#" class="product-info__link">
-                  <span class="product-info__title-group">Group</span>
+              <div class="test-product-info">
+                <a href="#" class="test-product-info__link">
+                  <span class="test-product-info__title-group">Group</span>
                 </a>
-                <p class="product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <p class="test-product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
               </div>
 
-              <div class="product-bottom">
+              <div class="test-product-bottom">
 
-                <div class="product-price">
-                  <span class="product-price__value">1&nbsp;000
-                    <span class="product-price__value-currency">&#8372;</span>
+                <div class="test-product-price">
+                  <span class="test-product-price__value">1&nbsp;000
+                    <span class="test-product-price__value-currency">&#8372;</span>
                   </span>
                 </div>
 
-                <div class="product-availability">
-                  <button class="product-availability__btn">
-                    <svg class="product-availability__img" width="21" height="20">
+                <div class="availability">
+                  <button class="availability__btn">
+                    <svg class="availability__img" width="21" height="20">
                       <use href="icons/sprite.svg#check" />
                     </svg>
-                    <span class="product-availability__available">В наличии</span>
-                    <!-- <svg class="product-availability__not-av-img" width="21" height="20">
-                    <use href="icons/sprite.svg#check-not-av"/>
-                  </svg> -->
-                    <!-- <span class="product-availability__not-available">Нет в наличии</span> -->
+                    <span class="availability__text">В наличии</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-card">
+
+            <div class="card-top">
+              <div class="card-top__label label-new">new</div>
+
+              <button class="card-top__button">
+                <svg class="card-top__button-img" width="31" height="24">
+                  <use href="icons/sprite.svg#favorite" />
+                </svg>
+              </button>
+
+              <a href="#" class="card-top__img-link">
+                <img src="img/cards/product-img-1.jpg" alt="Product photo" class="card-top__img">
+              </a>
+            </div>
+
+            <div class="card-desc">
+
+              <form class="card-rating">
+                <fieldset class="rating">
+                  <legend class="rating__caption">Рейтинг</legend>
+                  <div class="rating__group">
+                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично"
+                      checked>
+                  </div>
+                </fieldset>
+
+                <a href="#" class="card-rating__link">
+                  <span class="card-rating__number">2</span>
+                </a>
+              </form>
+
+              <div class="test-product-info">
+                <a href="#" class="test-product-info__link">
+                  <span class="test-product-info__title-group">Group</span>
+                </a>
+                <p class="test-product-info__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              </div>
+
+              <div class="test-product-bottom">
+
+                <div class="test-product-price">
+                  <span class="test-product-price__value">1&nbsp;000
+                    <span class="test-product-price__value-currency">&#8372;</span>
+                  </span>
+                </div>
+
+                <div class="availability">
+                  <button class="availability__btn">
+                    <svg class="availability__img" width="21" height="20">
+                      <use href="icons/sprite.svg#check" />
+                    </svg>
+                    <span class="availability__text">В наличии</span>
                   </button>
                 </div>
               </div>
@@ -358,10 +850,12 @@
 
         </div>
 
-        <div class="products-pagination">
+        <!-- !!!PAGINATION!!! !!!PAGINATION!!! !!!PAGINATION!!! -->
+
+        <!-- <div class="products-pagination">
           <button class="products-pagination__prev-btn">
             <svg class="products-pagination__prev-img" width="16" height="29">
-              <use href="icons/sprite.svg#pagination-btn" />
+              <use href="icons/sprite.svg#arrow" />
             </svg>
           </button>
           <button class="products-pagination__item">1</button>
@@ -371,14 +865,170 @@
           <button class="products-pagination__item">5</button>
           <button class="products-pagination__next-btn">
             <svg class="products-pagination__next-img" width="16" height="29">
-              <use href="icons/sprite.svg#pagination-btn" />
+              <use href="icons/sprite.svg#arrow" />
             </svg>
           </button>
-        </div>
+        </div> -->
+
+        <!-- !!!PAGINATION!!! !!!PAGINATION!!! !!!PAGINATION!!! -->
 
       </section>
+
+      <div class="call-back">
+        <div class="call-back__title">Нужна помощь в подборе товара? Мы перезваниваем !</div>
+        <form class="call-back__form">
+          <input type="text" class="call-back__input" placeholder="+38 (0xx) xx - xx - xxx">
+          <button type="submit" class="call-back__button">Отправить</button>
+        </form>
+      </div>
+
     </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__links">
+            <div class="footer__logo">
+              <a href="#" class="footer__logo-link">
+                <svg class="footer__social-img" width="117" height="45">
+                  <use href="icons/sprite.svg#logo" />
+                </svg>
+              </a>
+            </div>
+            <div class="footer__social-group">
+              <div class="footer__social-item">
+                <a href="#" class="footer__social-link">
+                  <svg class="footer__social-img" width="22" height="22" fill-opacity="0.5">
+                    <use href="icons/sprite.svg#instagram" />
+                  </svg>
+                </a>
+              </div>
+              <div class="footer__social-item">
+                <a href="#" class="footer__social-link">
+                  <svg class="footer__social-img" width="12" height="24" fill-opacity="0.5">
+                    <use href="icons/sprite.svg#facebook" />
+                  </svg>
+                </a>
+              </div>
+              <div class="footer__social-item">
+                <a href="#" class="footer__social-link">
+                  <svg class="footer__social-img" width="22" height="18" fill-opacity="0.5">
+                    <use href="icons/sprite.svg#twitter" />
+                  </svg>
+                </a>
+              </div>
+              <div class="footer__social-item">
+                <a href="#" class="footer__social-link">
+                  <svg class="footer__social-img" width="26" height="18" fill-opacity="0.5">
+                    <use href="icons/sprite.svg#youtube" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer__partnership">
+              <div class="footer-delivery">
+                <svg class="footer__delivery-img" width="84" height="30" fill-opacity="0.5">
+                  <use href="icons/sprite.svg#nova-poshta" />
+                </svg>
+              </div>
+              <div class="footer-payments">
+                <div class="footer-payments__item">
+                  <img class="footer-payments__img" src="img/footer/visa.jpg" alt="Visa">
+                </div>
+                <div class="footer-payments__item">
+                  <img class="footer-payments__img" src="img/footer/mastercard.jpg" alt="MasterCard">
+                </div>
+                <div class="footer-payments__item">
+                  <img class="footer-payments__img" src="img/footer/maestro.jpg" alt="Maestro">
+                </div>
+                <div class="footer-payments__item">
+                  <img class="footer-payments__img" src="img/footer/paypal.jpg" alt="PayPal">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__services">
+            <h4 class="footer__title">Группа 1</h4>
+            <div class="footer__services-group">
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Ноутбуки</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Планшеты</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Аксессуары для планшетов и электронных книг</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Кабели и переходники</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Сумки для ноутбуков</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Автотовары</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Сантехника</a>
+              </div>
+              <div class="footer__services-item">
+                <a href="#" class="footer__services-link">Ремонт</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer_info">
+            <h4 class="footer__title">Группа 2</h4>
+            <div class="footer__info-group">
+              <div class="footer__info-item">
+                <a href="#" class="footer__info-link">Политика конфиденциальности</a>
+              </div>
+              <div class="footer__info-item">
+                <a href="#" class="footer__info-link">Доставка и оплата</a>
+              </div>
+              <div class="footer__info-item">
+                <a href="#" class="footer__info-link">Способы оплаты</a>
+              </div>
+              <div class="footer__info-item">
+                <a href="#" class="footer__info-link">Гарантия</a>
+              </div>
+              <div class="footer__info-item">
+                <a href="#" class="footer__info-link">Контакты</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__hotline">
+            <h4 class="footer__title">Горячая линия</h4>
+            <div class="footer__hotline-group">
+              <div class="footer__hotline-item footer__hotline-main-item">
+                <a href="tel:+380800000000" class="footer__hotline-link">0 800 000 000</a>
+              </div>
+              <div class="footer__hotline-item">
+                <a href="tel:+380680000000" class="footer__hotline-link">+38 068 000 00 00</a>
+              </div>
+              <div class="footer__hotline-item">
+                <a href="tel:+380990000000" class="footer__hotline-link">+38 099 000 00 00</a>
+              </div>
+              <div class="footer__hotline-item">
+                <a href="tel:+380960000000" class="footer__hotline-link">+38 096 000 00 00</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__authorship">
+            <div class="footer__authorship-author">2021 © Wezom Practice</div>
+            <div class="footer__authorship-developer">Разработка \\ <a class="footer__authorship-link"
+                href="#">Wezom</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 
