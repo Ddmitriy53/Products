@@ -134,7 +134,7 @@ svg path {
 .product-info {
   display: grid;
   grid-template-columns: 0.4fr 1.3fr 1.3fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(min-content, max-content);
   gap: 50px 2px;
   grid-template-areas:
     "first second third"
@@ -153,11 +153,11 @@ svg path {
   grid-area: third;
 }
 
-.product-content-bottom-1 {
+.characteristics {
   grid-area: four;
 }
 
-.product-content-bottom-2 {
+.product-reviews {
   grid-area: five;
 }
 
