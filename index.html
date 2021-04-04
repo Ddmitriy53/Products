@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тестовые товары</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>Картридж турбины Mercedes E-klasse</title>
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
@@ -19,16 +19,16 @@
 
         <div class="tabs">
           <ul class="tabs__list">
-            <li class="tabs__item js-tab-trigger active" data-tab="1">
-              <a class="tabs__link tabs__link--active">Всё о товаре</a>
+            <li class="tabs__item js-tab-trigger active" id="tab1" data-tab="1">
+              <a class="tabs__link tabs__link">Всё о товаре</a>
             </li>
-            <li class="tabs__item js-tab-trigger" data-tab="2">
+            <li class="tabs__item js-tab-trigger" id="tab2" data-tab="2">
               <a class="tabs__link tabs__link">Описание</a>
             </li>
-            <li class="tabs__item js-tab-trigger" data-tab="3">
+            <li class="tabs__item js-tab-trigger" id="tab3" data-tab="3">
               <a class="tabs__link tabs__link">Характеристики</a>
             </li>
-            <li class="tabs__item js-tab-trigger" data-tab="4">
+            <li class="tabs__item js-tab-trigger" id="tab4" data-tab="4">
               <a class="tabs__link tabs__link">Отзывы <span class="tabs__link-span">32</span></a>
             </li>
           </ul>
@@ -37,7 +37,7 @@
         <div class="tabs-content">
           <div class="tabs-content__item tabs-main js-tab-content active" data-tab="1">
             <div class="product-info">
-              <div class="product-info__left">
+              <div class="product-info-left">
                 <div class="product-slider">
                   <div class="product-slider__item">
                     <img class="product-slider__img" src="img/product-slider/slider-image-1.jpg" alt="Slider image">
@@ -116,7 +116,7 @@
                     <div class="product-price__value">3&nbsp;799<span class="product-price__symbol">&#8372;</span>
                     </div>
                     <div class="product-price__old-value">4&nbsp;200<span
-                        class="product-price__symbol">&nbsp;&#8372;</span></div>
+                        class="product-price__old-symbol">&nbsp;&#8372;</span></div>
                   </div>
                   <div class="order">
                     <button type="button" class="order__cart">
@@ -198,54 +198,54 @@
                 </div>
               </div>
 
-              <section class="characteristics">
-                <div class="characteristics__heading">
-                  <h2 class="characteristics__title">Характеристики
-                    <span class="characteristics__product-name">Картридж турбины Mercedes E-klasse</span>
+              <section class="product-characteristics">
+                <div class="product-characteristics__heading">
+                  <h2 class="product-characteristics__title">Характеристики
+                    <span class="product-characteristics__product-name">Картридж турбины Mercedes E-klasse</span>
                   </h2>
                 </div>
-                <div class="characteristics__group">
-                  <dl class="characteristics__list">
-                    <div class="characteristics__item">
-                      <dt class="characteristics__label">
+                <div class="product-characteristics__group">
+                  <dl class="product-characteristics__list">
+                    <div class="product-characteristics__item">
+                      <dt class="product-characteristics__label">
                         <span>Тип</span>
                       </dt>
-                      <dd class="characteristics__value">
-                        <ul class="characteristics-sub__list">
+                      <dd class="product-characteristics__value">
+                        <ul class="product-characteristics__sub-list">
                           <li>Группа 1</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics__item">
-                      <dt class="characteristics__label">
+                    <div class="product-characteristics__item">
+                      <dt class="product-characteristics__label">
                         <span>Номер</span>
                       </dt>
-                      <dd class="characteristics__value">
-                        <ul class="characteristics__sub-list">
+                      <dd class="product-characteristics__value">
+                        <ul class="product-characteristics__sub-list">
                           <li>B40-2-210</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics__item">
-                      <dt class="characteristics__label">
+                    <div class="product-characteristics__item">
+                      <dt class="product-characteristics__label">
                         <span>Бренд</span>
                       </dt>
-                      <dd class="characteristics__value">
-                        <ul class="characteristics__sub-list">
+                      <dd class="product-characteristics__value">
+                        <ul class="product-characteristics__sub-list">
                           <li>TurboParts</li>
                         </ul>
                       </dd>
                     </div>
                   </dl>
                 </div>
-                <a href="#" class="characteristics__link-more">Все характеристики</a>
+                <a href="#tab3" class="product-characteristics__link-more">Все характеристики</a>
               </section>
 
               <div class="product-reviews">
                 <div class="product-reviews__heading">
                   <h2 class="product-reviews__title">Отзывы покупателей <span class="product-reviews__number">32</span>
                   </h2>
-                  <a href="" class="product-reviews__link">Все отзывы</a>
+                  <a href="#tab4" class="product-reviews__link">Все отзывы</a>
                 </div>
                 <div class="reviews">
                   <div class="reviews-group" id="reviews-group">
@@ -259,15 +259,15 @@
                           <fieldset class="rating">
                             <legend class="rating__caption">Качество товара</legend>
                             <div class="rating__group">
-                              <input class="rating__star" type="radio" name="product-rating" value="1"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="1"
                                 aria-label="Ужасно">
-                              <input class="rating__star" type="radio" name="product-rating" value="2"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="2"
                                 aria-label="Сносно">
-                              <input class="rating__star" type="radio" name="product-rating" value="3"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="3"
                                 aria-label="Нормально">
-                              <input class="rating__star" type="radio" name="product-rating" value="4"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="4"
                                 aria-label="Хорошо" checked>
-                              <input class="rating__star" type="radio" name="product-rating" value="5"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="5"
                                 aria-label="Отлично">
                             </div>
                           </fieldset>
@@ -289,15 +289,15 @@
                           <fieldset class="rating">
                             <legend class="rating__caption">Качество товара</legend>
                             <div class="rating__group">
-                              <input class="rating__star" type="radio" name="product-rating" value="1"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="1"
                                 aria-label="Ужасно">
-                              <input class="rating__star" type="radio" name="product-rating" value="2"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="2"
                                 aria-label="Сносно" checked>
-                              <input class="rating__star" type="radio" name="product-rating" value="3"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="3"
                                 aria-label="Нормально">
-                              <input class="rating__star" type="radio" name="product-rating" value="4"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="4"
                                 aria-label="Хорошо">
-                              <input class="rating__star" type="radio" name="product-rating" value="5"
+                              <input class="rating__star" type="radio" name="rewiew-rating" value="5"
                                 aria-label="Отлично">
                             </div>
                           </fieldset>
@@ -307,6 +307,7 @@
                         часа прочитала отзывы и остановилась на этой модельке. Изначально знала, что пластины не
                         сьемные, но плюсов было больше. Спасибо за молниеносную отправку!</p>
                     </div>
+
                   </div>
                   <div class="reviews__load">
                     <button type="button" class="reviews__load-btn">Показать еще</button>
@@ -317,74 +318,163 @@
             </div>
           </div>
           <div class="tabs-content__item tabs-description js-tab-content" data-tab="2">
-            <div id="editorjs"></div>
+            <div class="description-content">
+              <div class="container">
+                <h2 class="description-title">Описание <span>картридж турбины Mercedes E-klasse</span></h2>
+
+                <div class="description-group">
+                  <p class="description-paragraph">Производитель: <span>JP Group (Denmark)</span></p>
+                  <p class="description-paragraph">Модель: <span>GT2256V</span></p>
+                  <p class="description-paragraph">Оригинальный номер:</p>
+                  <ul class="description-list">
+                    <li class="description-item">727463-5006S</li>
+                    <li class="description-item">727463-9006S</li>
+                    <li class="description-item">727463-5004S</li>
+                    <li class="description-item">727463-0004</li>
+                    <li class="description-item">727463-0003</li>
+                    <li class="description-item">727463-0002</li>
+                    <li class="description-item">727463-0001</li>
+                  </ul>
+                  <p class="description-paragraph">Заводской номер:</p>
+                  <ul class="description-list">
+                    <li class="description-item">A6470900180</li>
+                    <li class="description-item">A6470960099</li>
+                  </ul>
+                  <p class="description-paragraph">Автомобиль: <span>Mercedes-PKW E-Klasse 270 CDI (W211)</span></p>
+                  <p class="description-paragraph">Двигатель: <span>OM 647</span></p>
+                  <p class="description-paragraph">Объем двигателя: <span>2685 см3 / 2.7 L</span></p>
+                  <p class="description-paragraph">Мощность двигателя: <span>130 kw / 177 л.с.</span></p>
+                  <p class="description-paragraph">Год выпуска: <span>с января 2002 г. ― по декабрь 2005 г.</span></p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="tabs-content__item tabs-characteristics js-tab-content" data-tab="3">
-            <section class="characteristics-full">
-              <div class="characteristics-full__heading">
-                <h2 class="characteristics-full__title">Характеристики
-                  <span class="characteristics-full__product-name">Картридж турбины Mercedes E-klasse</span>
+            <section class="product-characteristics-full">
+              <div class="product-characteristics-full__heading">
+                <h2 class="product-characteristics-full__title">Характеристики
+                  <span class="product-characteristics-full__product-name">Картридж турбины Mercedes E-klasse</span>
                 </h2>
               </div>
-              <div class="characteristics-full__content">
-                <div class="characteristics-full__group">
-                  <dl class="characteristics-full__list">
-                    <div class="characteristics-full__item">
-                      <dt class="characteristics-full__label">
+              <div class="product-characteristics-full__content">
+                <div class="product-characteristics-full__group">
+                  <dl class="product-characteristics-full__list">
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
                         <span>Тип</span>
                       </dt>
-                      <dd class="characteristics-full__value">
-                        <ul class="characteristics-full__sub-list">
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
                           <li>Группа 1</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics-full__item">
-                      <dt class="characteristics-full__label">
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
                         <span>Номер</span>
                       </dt>
-                      <dd class="characteristics-full__value">
-                        <ul class="characteristics-full__sub-list">
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
                           <li>B40-2-210</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics-full__item">
-                      <dt class="characteristics-full__label">
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
                         <span>Бренд</span>
                       </dt>
-                      <dd class="characteristics-full__value">
-                        <ul class="characteristics-full__sub-list">
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
                           <li>TurboParts</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics-full__item">
-                      <dt class="characteristics-full__label">
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
                         <span>Тип</span>
                       </dt>
-                      <dd class="characteristics-full__value">
-                        <ul class="characteristics-full__sub-list">
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
                           <li>Группа 1</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics-full__item">
-                      <dt class="characteristics-full__label">
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
                         <span>Номер</span>
                       </dt>
-                      <dd class="characteristics-full__value">
-                        <ul class="characteristics-full__sub-list">
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
                           <li>B40-2-210</li>
                         </ul>
                       </dd>
                     </div>
-                    <div class="characteristics-full__item">
-                      <dt class="characteristics-full__label">
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
                         <span>Бренд</span>
                       </dt>
-                      <dd class="characteristics-full__value">
-                        <ul class="characteristics-full__sub-list">
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
+                          <li>TurboParts</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
+                        <span>Тип</span>
+                      </dt>
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
+                          <li>Группа 1</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
+                        <span>Номер</span>
+                      </dt>
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
+                          <li>B40-2-210</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
+                        <span>Бренд</span>
+                      </dt>
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
+                          <li>TurboParts</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
+                        <span>Тип</span>
+                      </dt>
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
+                          <li>Группа 1</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
+                        <span>Номер</span>
+                      </dt>
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
+                          <li>B40-2-210</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="product-characteristics-full__item">
+                      <dt class="product-characteristics-full__label">
+                        <span>Бренд</span>
+                      </dt>
+                      <dd class="product-characteristics-full__value">
+                        <ul class="product-characteristics-full__sub-list">
                           <li>TurboParts</li>
                         </ul>
                       </dd>
@@ -400,7 +490,7 @@
               <div class="product-reviews__heading">
                 <h2 class="product-reviews__title">Отзывы покупателей <span class="product-reviews__number">32</span>
                 </h2>
-                <a href="" class="product-reviews__link">Все отзывы</a>
+                <a href="#tab4" class="product-reviews__link">Все отзывы</a>
               </div>
               <div class="reviews">
 
@@ -468,6 +558,7 @@
         <div class="test-products__top">
           <h2 class="test-products__title">Тестовые товары</h2>
         </div>
+
         <div class="products-main">
 
           <div class="products-card">
@@ -492,12 +583,13 @@
                 <fieldset class="rating">
                   <legend class="rating__caption">Рейтинг</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно"
+                    <input class="rating__star" type="radio" name="test-product-rating" value="1" aria-label="Ужасно"
                       checked>
-                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
-                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
-                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
-                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="3"
+                      aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="5" aria-label="Отлично">
                   </div>
                 </fieldset>
 
@@ -561,12 +653,13 @@
                 <fieldset class="rating">
                   <legend class="rating__caption">Рейтинг</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
-                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно"
+                    <input class="rating__star" type="radio" name="test-product-rating" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="2" aria-label="Сносно"
                       checked>
-                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
-                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
-                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="3"
+                      aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="5" aria-label="Отлично">
                   </div>
                 </fieldset>
 
@@ -624,12 +717,12 @@
                 <fieldset class="rating">
                   <legend class="rating__caption">Рейтинг</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
-                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
-                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально"
+                    <input class="rating__star" type="radio" name="test-product-rating" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="3" aria-label="Нормально"
                       checked>
-                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
-                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="5" aria-label="Отлично">
                   </div>
                 </fieldset>
 
@@ -687,12 +780,13 @@
                 <fieldset class="rating">
                   <legend class="rating__caption">Рейтинг</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
-                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
-                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
-                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо"
+                    <input class="rating__star" type="radio" name="test-product-rating" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="3"
+                      aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="4" aria-label="Хорошо"
                       checked>
-                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="5" aria-label="Отлично">
                   </div>
                 </fieldset>
 
@@ -750,11 +844,12 @@
                 <fieldset class="rating">
                   <legend class="rating__caption">Рейтинг</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
-                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
-                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
-                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
-                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично"
+                    <input class="rating__star" type="radio" name="test-product-rating" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="3"
+                      aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="5" aria-label="Отлично"
                       checked>
                   </div>
                 </fieldset>
@@ -813,11 +908,12 @@
                 <fieldset class="rating">
                   <legend class="rating__caption">Рейтинг</legend>
                   <div class="rating__group">
-                    <input class="rating__star" type="radio" name="product-rating" value="1" aria-label="Ужасно">
-                    <input class="rating__star" type="radio" name="product-rating" value="2" aria-label="Сносно">
-                    <input class="rating__star" type="radio" name="product-rating" value="3" aria-label="Нормально">
-                    <input class="rating__star" type="radio" name="product-rating" value="4" aria-label="Хорошо">
-                    <input class="rating__star" type="radio" name="product-rating" value="5" aria-label="Отлично"
+                    <input class="rating__star" type="radio" name="test-product-rating" value="1" aria-label="Ужасно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="2" aria-label="Сносно">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="3"
+                      aria-label="Нормально">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="4" aria-label="Хорошо">
+                    <input class="rating__star" type="radio" name="test-product-rating" value="5" aria-label="Отлично"
                       checked>
                   </div>
                 </fieldset>
@@ -853,37 +949,14 @@
               </div>
             </div>
           </div>
-
         </div>
-
-        <!-- !!!PAGINATION!!! !!!PAGINATION!!! !!!PAGINATION!!! -->
-
-        <!-- <div class="products-pagination">
-          <button class="products-pagination__prev-btn">
-            <svg class="products-pagination__prev-img" width="16" height="29">
-              <use href="icons/sprite.svg#arrow" />
-            </svg>
-          </button>
-          <button class="products-pagination__item">1</button>
-          <button class="products-pagination__item products-pagination__item--active">2</button>
-          <button class="products-pagination__item">3</button>
-          <button class="products-pagination__item">4</button>
-          <button class="products-pagination__item">5</button>
-          <button class="products-pagination__next-btn">
-            <svg class="products-pagination__next-img" width="16" height="29">
-              <use href="icons/sprite.svg#arrow" />
-            </svg>
-          </button>
-        </div> -->
-
-        <!-- !!!PAGINATION!!! !!!PAGINATION!!! !!!PAGINATION!!! -->
 
       </section>
 
       <div class="call-back">
         <div class="call-back__title">Нужна помощь в подборе товара? Мы перезваниваем !</div>
         <form class="call-back__form">
-          <input type="text" class="call-back__input" placeholder="+38 (0xx) xx - xx - xxx">
+          <input id="phone" type="text" class="call-back__input" required>
           <button type="submit" class="call-back__button">Отправить</button>
         </form>
       </div>
@@ -982,7 +1055,7 @@
               </div>
             </div>
           </div>
-          <div class="footer_info">
+          <div class="footer__info">
             <h4 class="footer__title">Группа 2</h4>
             <div class="footer__info-group">
               <div class="footer__info-item">
@@ -1021,7 +1094,7 @@
           </div>
           <div class="footer__authorship">
             <div class="footer__authorship-author">2021 © Wezom Practice</div>
-            <div class="footer__authorship-developer">Разработка \\ <a class="footer__authorship-link"
+            <div class="footer__authorship-developer">Разработка <span>\</span>\ <a class="footer__authorship-link"
                 href="#">Wezom</a></div>
           </div>
         </div>
@@ -1029,12 +1102,12 @@
     </footer>
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/slider.js"></script>
-  <script src="js/editor.js"></script>
-  <script src="js/reviews.js  "></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

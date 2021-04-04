@@ -100,7 +100,8 @@
 }
 .slick-initialized .slick-slide
 {
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 .slick-loading .slick-slide
 {
@@ -112,7 +113,7 @@
 
     height: auto;
 
-    border: 1px solid transparent;
+    border: none;
 }
 .slick-arrow.slick-hidden {
     display: none;
